@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kelas ABC</title>
+    <style>
+      /* CSS untuk tampilan halaman */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+      }
+      .seat {
+        background-color: #eee;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        height: 60px;
+        margin: 5px;
+        width: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .seat.available {
+        background-color: #7FFF7F;
+        border: 1px solid #4CAF50;
+        color: #fff;
+        cursor: pointer;
+      }
+      .seat.reserved {
+        background-color: #FF6961;
+        border: 1px solid #FF6961;
+        color: #fff;
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Kelas ABC</h1>
+    </div>
+    <div class="content">
+      <h2>Daftar Kursi</h2>
+      <div id="seats"></div>
+    </div>
+    <script>
+      // JavaScript untuk interaksi dengan kursi
+      var seats = [
+        {id: "A1", status: "available"},
+        {id: "A2", status: "available"},
+        {id: "A3", status: "reserved"},
+        {id: "A4", status: "available"},
+        {id: "A5", status: "available"},
+        {id: "B1", status: "available"},
+        {id: "B2", status: "reserved"},
+        {id: "B3", status: "available"},
+        {id: "B4", status: "reserved"},
+        {id: "B5", status: "available"},
+        {id: "C1", status: "available"},
+        {id: "C2", status: "available"},
+        {id: "C3", status: "available"},
+        {id: "C4", status: "available"},
+        {id: "C5", status: "available"},
+        {id: "D1", status: "available"},
+        {id: "D2", status: "reserved"},
+        {id: "D3", status: "available"},
+        {id: "D4", status: "reserved"},
+        {id: "D5", status: "available"},
+      ];
+
+      // Memuat kursi ke halaman
+      var seatsDiv = document.getElementById("seats");
+      for (var i = 0; i < seats.length; i++) {
+        var seat = document.createElement("div");
+        seat.id = seats[i].id;
+        seat.className = "seat " + seats[i].status;
+        seat.innerHTML = seats[i].id;
+        seatsDiv.appendChild(seat);
+      }
+
+      //

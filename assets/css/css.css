@@ -1,0 +1,39 @@
+/* style.css */
+
+/* Style untuk tabel absen */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Style untuk tempat duduk */
+  .seat {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ddd;
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 48px;
+    cursor: pointer;
+  }
+  
+  .selected {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
